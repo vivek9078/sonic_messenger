@@ -1,0 +1,114 @@
+/* General Layout */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    overflow: hidden;
+    background: radial-gradient(circle at 20% 20%, #14131c, #020111, #0f0c15);
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Bubbles Canvas */
+  #bubbleCanvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+  }
+  
+  /* Card */
+  .card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 40px;
+    width: 400px;
+    backdrop-filter: blur(10px);
+    text-align: center;
+    color: white;
+    z-index: 1;
+    animation: floatCard 6s ease-in-out infinite;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.7);
+  }
+  
+  /* Title */
+  h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px #1a0305, 0 0 20px #00f2fe;
+  }
+  
+  /* Textarea */
+  textarea {
+    width: 90%;
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 15px;
+    border: none;
+    outline: none;
+    resize: none;
+    font-size: 16px;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+  }
+  
+  /* Buttons */
+  .buttons {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .send-btn, .receive-btn {
+    background: linear-gradient(45deg, #43cea2, #185a9d);
+    border: none;
+    padding: 12px 20px;
+    border-radius: 30px;
+    font-size: 16px;
+    color: white;
+    cursor: pointer;
+    transition: background 0.4s, transform 0.4s;
+  }
+  
+  .send-btn:hover, .receive-btn:hover {
+    background: linear-gradient(45deg, #ff6ec4, #7873f5);
+    transform: scale(1.1);
+  }
+  
+  /* Status */
+  #status {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: rgb(13, 13, 13);
+  }
+  
+  /* Animation */
+  @keyframes floatCard {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+  }
+  textarea::placeholder {
+    color: #cccccc; /* <-- change this color code to whatever you like */
+    opacity: 1; /* optional: keep placeholder fully visible */
+  }
+  .sound-icon {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+  }
+  h1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #ffffff;
+    text-shadow: 0 0 10px #00f2fe, 0 0 20px #00f2fe;
+  }
